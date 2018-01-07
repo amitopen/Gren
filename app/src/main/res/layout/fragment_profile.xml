@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.dream.gre.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:text="Account"
+            android:textColor="@color/colorBlueLogon"
+            android:textSize="30sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            app:contentPadding="12dp"
+            android:layout_weight="1.5"
+            app:cardElevation="18dp"
+            app:cardCornerRadius="18dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="14"
+                    android:inputType="textPersonName"
+                    android:text="Max"
+                    android:textSize="20sp"
+                    android:layout_above="@+id/editText2"
+                    android:layout_alignLeft="@+id/editText2"
+                    android:layout_alignStart="@+id/editText2"
+                    android:layout_marginBottom="21dp" />
+
+                <TextView
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="14"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:text="amitopen007@gmail.com"
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/editText3"
+                    android:layout_alignStart="@+id/editText3" />
+
+                <TextView
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="14"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:text="log out"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="22dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginRight="27dp"
+                    android:text="Free Trial"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="18sp"
+                    android:layout_alignTop="@+id/editText"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView
+
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Videos"
+            android:textColor="@color/colorBlueLogon"
+            android:textSize="30sp"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            app:contentPadding="12dp"
+            android:layout_weight="0.5"
+            app:cardElevation="18dp"
+            app:cardCornerRadius="18dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Reload Videos"
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Max"
+            android:textColor="@color/colorBlueLogon"
+            android:textSize="30sp"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            app:contentPadding="12dp"
+            android:layout_weight="0.5"
+            app:cardElevation="18dp"
+            app:cardCornerRadius="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:text="Have a Question? Email us"/>
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_weight="0.4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Max 098"/>
+    </LinearLayout>
+
+
+</FrameLayout>

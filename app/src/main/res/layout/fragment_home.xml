@@ -1,0 +1,480 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.example.dream.gre.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Hello"
+        android:paddingTop="5sp"
+        android:textSize="27sp"/>
+</LinearLayout>
+
+        <HorizontalScrollView
+    android:layout_weight="1.5"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/s"
+            android:scaleType="fitXY"
+            android:id="@+id/button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/button"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:text="How long should i learn" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/t"
+            android:scaleType="fitXY"
+            android:id="@+id/button1"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/button1"
+    android:layout_gravity="bottom"
+    android:layout_marginLeft="13dp"
+    android:layout_marginStart="13dp"
+    android:text="How long should i learn"
+    />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="12dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/s"
+                        android:scaleType="fitXY"
+                        android:id="@+id/button13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/button13"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:text="How long should i learn" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="12dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/s"
+                        android:scaleType="fitXY"
+                        android:id="@+id/button12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/button12"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:text="How long should i learn" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/s"
+                                android:id="@+id/button2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button2"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="152dp"
+                                android:layout_weight="0.5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="8dp"
+                                    android:text="Planning"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/button3"
+                                android:background="@drawable/t"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button3"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn"
+                                />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:text="Planning"
+                                android:textSize="22sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Planning"
+                android:textSize="22sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/s"
+                                android:id="@+id/button4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button4"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="152dp"
+                                android:layout_weight="0.5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="8dp"
+                                    android:text="Planning"
+                                    android:textSize="22sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/button5"
+                                android:background="@drawable/t"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button5"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn"
+                                />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

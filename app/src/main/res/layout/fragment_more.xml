@@ -1,0 +1,140 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueLogon"
+    tools:context="com.example.dream.gre.MoreFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="6"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_weight="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="70dp"
+            android:paddingTop="5sp"
+            android:textColor="@color/colorGreen"
+            android:gravity="center_horizontal"
+            android:text="Max" />
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="70dp"
+                    app:srcCompat="@drawable/ic_videocam_black_24dp" />
+
+                <ImageView
+                    android:paddingLeft="70dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/ic_device_hub_black_24dp"/>
+                <ImageView
+                    android:paddingLeft="70dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/ic_equalizer_black_24dp"/>
+                <ImageView
+                    android:paddingLeft="70dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/ic_pool_black_24dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingRight="60dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="200 GRE Video Lessons"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:layout_weight="1"
+                    android:paddingRight="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="1000 Practice Questions"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingRight="50dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="+5 Points Score Guarantee"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingRight="60dp"
+                    android:paddingTop="10dp"
+                    android:text="24/7 Tutor Support"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.6"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"></LinearLayout>
+        <Button
+            android:layout_weight="0.4"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/get_premium"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_rounded_corner"/>
+<TextView
+    android:paddingTop="5dp"
+    android:layout_weight="0.3"
+    android:layout_width="wrap_content"
+    android:text="See plans and pricing"
+    android:textColor="@color/colorWhite"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="0dp" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
