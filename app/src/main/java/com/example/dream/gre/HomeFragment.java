@@ -5,12 +5,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 
@@ -22,7 +24,7 @@ import android.widget.Toast;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,9 +33,10 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    CardView cardView1,cardView2,cardView3,cardView4,cardView5,cardView6;
     private OnFragmentInteractionListener mListener;
     ViewPager viewPager;
+    ScrollView scrollView;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -76,12 +79,40 @@ public class HomeFragment extends Fragment {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());*/
         viewPager = (ViewPager)view.findViewById(R.id.viewPager);
-
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getContext());
         viewPager.setAdapter(viewPagerAdapter);
+
+        cardView1=(CardView)view.findViewById(R.id.card1);
+        cardView2=(CardView)view.findViewById(R.id.card2);
+        cardView1.setOnClickListener(this);
+        cardView2.setOnClickListener(this);
+       /* switch (view.getId()){
+            case R.id.card1:
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.content,new ProfileFragment() ).addToBackStack("root").commit();
+                break;
+            case R.id.card2:
+                Toast.makeText(getContext(), "card2 clicked", Toast.LENGTH_SHORT).show();
+        }*/
+
+
         return view;
 
     }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.card1:
+                Toast.makeText(getContext(), "card1 clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.card2:
+                Toast.makeText(getContext(), "card2 clicked", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -98,13 +129,19 @@ public class HomeFragment extends Fragment {
         } else {
             Toast.makeText(context, "HomeFragment Attached", Toast.LENGTH_SHORT).show();
         }
+
     }
+
 
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
+
     }
+
+
+
 
     /**
      * This interface must be implemented by activities that contain this
@@ -120,4 +157,11 @@ public class HomeFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
 }
+
+
