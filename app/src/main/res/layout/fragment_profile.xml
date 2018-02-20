@@ -60,20 +60,22 @@
                     android:inputType="textPersonName"
                     android:text="amitopen007@gmail.com"
                     android:layout_centerVertical="true"
-                    android:layout_alignLeft="@+id/editText3"
-                    android:layout_alignStart="@+id/editText3" />
+                    android:layout_alignLeft="@+id/logOutEt"
+                    android:layout_alignStart="@+id/logOutEt" />
 
-                <TextView
-                    android:id="@+id/editText3"
+                <Button
+                    android:id="@+id/logOutEt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="14"
                     android:textSize="20sp"
-                    android:inputType="textPersonName"
                     android:text="log out"
+                    android:background="@color/colorWhite"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="22dp" />
+                    android:layout_marginBottom="2dp"
+                    android:clickable="true"
+                   />
 
                 <TextView
                     android:id="@+id/textView2"

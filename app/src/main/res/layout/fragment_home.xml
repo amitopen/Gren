@@ -1,10 +1,18 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="5dp"
-    android:background="@color/cardview_dark_background"
+    android:scrollbarFadeDuration="22"
+    android:background="@color/colorGreen"
+    android:fillViewport="true"
+    android:splitMotionEvents="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/scroll"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.dream.gre.HomeFragment">
 
 
@@ -17,7 +25,6 @@
     android:layout_height="150dp">
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-
         android:layout_width="match_parent"
         android:layout_height="150dp">
 
@@ -51,6 +58,10 @@
         <android.support.v7.widget.CardView
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            app:cardElevation="12dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/card1"
             app:cardCornerRadius="12dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -60,14 +71,14 @@
             android:layout_height="100dp"
             android:background="@drawable/s"
             android:scaleType="fitXY"
-            android:id="@+id/button" />
+            android:id="@+id/img1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/button"
+                    android:layout_below="@+id/img1"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="13dp"
                     android:layout_marginStart="13dp"
@@ -83,6 +94,10 @@
         <android.support.v7.widget.CardView
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            app:cardElevation="12dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/card2"
             app:cardCornerRadius="12dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -92,13 +107,13 @@
             android:layout_height="100dp"
             android:background="@drawable/t"
             android:scaleType="fitXY"
-            android:id="@+id/button1"/>
+            android:id="@+id/img2"/>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
-    android:layout_below="@+id/button1"
+    android:layout_below="@+id/img2"
     android:layout_gravity="bottom"
     android:layout_marginLeft="13dp"
     android:layout_marginStart="13dp"
@@ -117,6 +132,10 @@
             <android.support.v7.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                app:cardElevation="12dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/card3"
                 app:cardCornerRadius="12dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -124,16 +143,16 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:background="@drawable/s"
+                        android:background="@drawable/uy"
                         android:scaleType="fitXY"
-                        android:id="@+id/button13" />
+                        android:id="@+id/img3" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_below="@+id/button13"
+                        android:layout_below="@+id/img3"
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="13dp"
                         android:layout_marginStart="13dp"
@@ -150,6 +169,10 @@
             <android.support.v7.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                app:cardElevation="12dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/card4"
                 app:cardCornerRadius="12dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -159,14 +182,14 @@
                         android:layout_height="100dp"
                         android:background="@drawable/s"
                         android:scaleType="fitXY"
-                        android:id="@+id/button12" />
+                        android:id="@+id/img4" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_below="@+id/button12"
+                        android:layout_below="@+id/img4"
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="13dp"
                         android:layout_marginStart="13dp"
@@ -180,6 +203,17 @@
 
 </HorizontalScrollView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Hello"
+                android:paddingTop="5sp"
+                android:textSize="27sp"/>
+        </LinearLayout>
+
         <HorizontalScrollView
             android:layout_weight="1.5"
             android:layout_width="match_parent"
@@ -191,71 +225,67 @@
                 <LinearLayout
 
                     android:layout_width="wrap_content"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card5"
+                        app:cardCornerRadius="12dp">
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
-                            <Button
-                                android:layout_width="100dp"
+                            <ImageView
+                                android:layout_width="match_parent"
                                 android:layout_height="100dp"
                                 android:background="@drawable/s"
-                                android:id="@+id/button2" />
+                                android:scaleType="fitXY"
+                                android:id="@+id/img5" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_below="@+id/button2"
+                                android:layout_below="@+id/img5"
                                 android:layout_gravity="bottom"
                                 android:layout_marginLeft="13dp"
                                 android:layout_marginStart="13dp"
                                 android:text="How long should i learn" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_alignParentBottom="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginBottom="152dp"
-                                android:layout_weight="0.5">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:padding="8dp"
-                                    android:text="Planning"
-                                    android:textSize="22sp" />
-                            </LinearLayout>
                         </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card6"
+                        app:cardCornerRadius="12dp">
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
-                            <Button
-                                android:layout_width="100dp"
+                            <ImageView
+                                android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:id="@+id/button3"
-                                android:background="@drawable/t"/>
+                                android:background="@drawable/t"
+                                android:scaleType="fitXY"
+                                android:id="@+id/img6"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_below="@+id/button3"
+                                android:layout_below="@+id/img6"
                                 android:layout_gravity="bottom"
                                 android:layout_marginLeft="13dp"
                                 android:layout_marginStart="13dp"
@@ -265,66 +295,84 @@
                         </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
+
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
-
-                        <LinearLayout
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card7"
+                        app:cardCornerRadius="12dp">
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="0.5">
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@drawable/uy"
+                                android:scaleType="fitXY"
+                                android:id="@+id/img7" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="8dp"
-                                android:text="Planning"
-                                android:textSize="22sp" />
-                        </LinearLayout>
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/img7"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+                        </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
+
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card8"
+                        app:cardCornerRadius="12dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@drawable/s"
+                                android:scaleType="fitXY"
+                                android:id="@+id/img8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/img8"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+                        </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
 
 
             </LinearLayout>
+
         </HorizontalScrollView>
 
         <LinearLayout
@@ -350,71 +398,67 @@
                 <LinearLayout
 
                     android:layout_width="wrap_content"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card9"
+                        app:cardCornerRadius="12dp">
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
-                            <Button
-                                android:layout_width="100dp"
+                            <ImageView
+                                android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@drawable/s"
-                                android:id="@+id/button4" />
+                                android:background="@drawable/uy"
+                                android:scaleType="fitXY"
+                                android:id="@+id/button" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_below="@+id/button4"
+                                android:layout_below="@+id/button"
                                 android:layout_gravity="bottom"
                                 android:layout_marginLeft="13dp"
                                 android:layout_marginStart="13dp"
                                 android:text="How long should i learn" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_alignParentBottom="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginBottom="152dp"
-                                android:layout_weight="0.5">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:padding="8dp"
-                                    android:text="Planning"
-                                    android:textSize="22sp" />
-                            </LinearLayout>
                         </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card10"
+                        app:cardCornerRadius="12dp">
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
-                            <Button
-                                android:layout_width="100dp"
+                            <ImageView
+                                android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:id="@+id/button5"
-                                android:background="@drawable/t"/>
+                                android:background="@drawable/t"
+                                android:scaleType="fitXY"
+                                android:id="@+id/button1"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_below="@+id/button5"
+                                android:layout_below="@+id/button1"
                                 android:layout_gravity="bottom"
                                 android:layout_marginLeft="13dp"
                                 android:layout_marginStart="13dp"
@@ -424,57 +468,90 @@
                         </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
+
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card11"
+                        app:cardCornerRadius="12dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@drawable/uy"
+                                android:scaleType="fitXY"
+                                android:id="@+id/button13" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button13"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+                        </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
+
                     android:layout_width="wrap_content"
+                    android:padding="10dp"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent" />
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        app:cardElevation="12dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/card12"
+                        app:cardCornerRadius="12dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@drawable/s"
+                                android:scaleType="fitXY"
+                                android:id="@+id/button12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/button12"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="13dp"
+                                android:layout_marginStart="13dp"
+                                android:text="How long should i learn" />
+                        </RelativeLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
 
 
             </LinearLayout>
+
         </HorizontalScrollView>
+
+
 
     </LinearLayout>
 
 
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>

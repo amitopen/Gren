@@ -2,8 +2,10 @@ package com.example.dream.gre;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -24,7 +26,7 @@ import android.widget.Toast;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment implements View.OnClickListener  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,9 +39,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private OnFragmentInteractionListener mListener;
     ViewPager viewPager;
     ScrollView scrollView;
+    String cook;
 
     public HomeFragment() {
         // Required empty public constructor
+    }
+    public void sendCook(String cookies){
+         cook=cookies;
     }
 
     /**
@@ -67,6 +73,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        setRetainInstance(true);
     }
 
     @Override
@@ -104,10 +111,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.card1:
-                Toast.makeText(getContext(), "card1 clicked", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(getContext(), "card1 clicked" +cook  , Toast.LENGTH_SHORT).show();
+
+
                 break;
             case R.id.card2:
                 Toast.makeText(getContext(), "card2 clicked", Toast.LENGTH_SHORT).show();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
+                transaction.replace(R.id.content,new WebViewFragment() ).addToBackStack(null).commit();
+                break;
+
+
+
+
         }
 
 
@@ -161,7 +180,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
     }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        onCreate(savedInstanceState);
+    }
+
 }
 
 

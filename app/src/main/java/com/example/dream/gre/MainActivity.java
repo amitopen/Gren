@@ -13,8 +13,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
@@ -24,7 +26,7 @@ import android.widget.Toolbar;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentCommunicationInterface {
     private BottomNavigationView navigationView;
     private static final String BACK_STACK_ROOT_TAG = "root_home_fragment";
     private static final String SELECTED_ITEM = "selected_item";
@@ -33,6 +35,18 @@ public class MainActivity extends AppCompatActivity {
     private int mMenuItemSelected;
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction transaction = fragmentManager.beginTransaction();
+    String c;
+    WebView myWebView;
+
+    @Override
+    public void respond(String cookies) {
+        HomeFragment homeFragment=new HomeFragment();
+
+        c=cookies;
+        String d="hello";
+        homeFragment.sendCook("Hello");
+
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -48,14 +62,15 @@ public class MainActivity extends AppCompatActivity {
                     getSupportActionBar().show();
                     return true;
                 case R.id.navigation_study:
+
                     transaction.replace(R.id.content,new StudyFragment()).addToBackStack(BACK_STACK_ROOT_TAG).commit();
                     getSupportActionBar().setTitle("Study");
                     getSupportActionBar().show();
                     return true;
                 case R.id.navigation_profile:
+                    Toast.makeText(MainActivity.this, "c"+c, Toast.LENGTH_SHORT).show();
                     getSupportActionBar().setTitle("Profile");
                     getSupportActionBar().show();
-
                     transaction.replace(R.id.content,new LoginFragment()).addToBackStack(BACK_STACK_ROOT_TAG).commit();
                     return true;
                 case R.id.navigation_more:
@@ -76,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+         myWebView= (WebView)findViewById(R.id.webView);
          navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -121,6 +136,11 @@ public class MainActivity extends AppCompatActivity {
         else if (R.id.navigation_home != seletedItemId) {
             setHomeItem(MainActivity.this);
         }
+        else if (R.id.navigation_home == seletedItemId) {
+            finish();
+        }
+
+
         else
             super.onBackPressed();
     }
@@ -129,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 activity.findViewById(R.id.navigation);
         bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     }
+
+
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -158,4 +180,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
+
 }
