@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements FragmentCommunica
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction transaction = fragmentManager.beginTransaction();
     String c;
-    WebView myWebView;
 
     @Override
     public void respond(String cookies) {
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements FragmentCommunica
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         myWebView= (WebView)findViewById(R.id.webView);
          navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 

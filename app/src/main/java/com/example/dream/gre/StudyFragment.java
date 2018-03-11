@@ -8,12 +8,16 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -88,6 +92,18 @@ public class StudyFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    private Handler handler= new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:{webViewGoBack();
+                }break;
+            }
+        }
+    };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -172,10 +188,29 @@ public class StudyFragment extends Fragment {
 
         }
 
+        myWebView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+
+                if (keyCode == KeyEvent.KEYCODE_BACK
+                        && keyEvent.getAction() == MotionEvent.ACTION_UP
+                        && myWebView.canGoBack()) {
+                    handler.sendEmptyMessage(1);
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
 
 
 
         return view;
+    }
+
+    private void webViewGoBack(){
+        myWebView.goBack();
     }
 
     private String getCookies(){
